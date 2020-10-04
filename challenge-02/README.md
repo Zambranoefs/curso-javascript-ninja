@@ -22,13 +22,13 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function novo_valor(valor) {
-    myvar = valor;
+function novo_valor() {
+    myvar = 33;
     return 'O valor da variável agora é ' + myvar;
 }
 
 // Invoque a função criada acima.
-novo_valor(33);
+novo_valor();
 
 // Qual o retorno da função? (Use comentários de bloco).
 /*'O valor da variável agora é 33'*/
@@ -69,34 +69,28 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function multiple_conditions (a, b, c) {
-    if (arguments.length == 0) {
-        return false;
-    }
-    else if (a !== undefined && b === undefined && c === undefined) {
+    if (a !== undefined && b === undefined && c === undefined) {
         return a;
-    }
-    else if (a === undefined && b !== undefined && c === undefined) {
-        return b;
-    }
-    else if (a === undefined && b === undefined && c !== undefined) {
-        return c;
     }
     else if (a !== undefined && b !== undefined && c === undefined) {
         return a + b;
     }
-    else if (a !== undefined && b === undefined && c !== undefined) {
-        return a + c;
+    else if (a !== undefined && b !== undefined && c !== undefined ) {
+        return (a + b) / c;
     }
-    else if (a === undefined && b !== undefined && c !== undefined) {
-        return b + c;
+    else if (a === undefined && b === undefined && c === undefined ) {
+        return false;
     }
     else {
-        return (a + b) / c;
+        return null;
     }
 }
 
 
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-console.log(multiple_conditions(5, 6 7));
+console.log(multiple_conditions()) // false;
+console.log(multiple_conditions(3)) // 3;
+console.log(multiple_conditions(3, 6)) // 9;
+console.log(multiple_conditions(3, 6, 2)) // 4.5;
 ```
