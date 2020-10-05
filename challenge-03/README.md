@@ -16,14 +16,14 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `andando` - Boolean - recebe "falso" por padrão
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
-var pessoa = { nome: 'Fernando', sobrenome: 'Zambrano', sexo: 'masculino', idade: 33, altura: 1.73, peso: 74, andando: false, caminhouQuantosMetros: 0};
+var pessoa = { nome: 'Fernando', sobrenome: 'Zambrano', sexo: 'Masculino', idade: 33, altura: 1.73, peso: 74, andando: false, caminhouQuantosMetros: 0};
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
-pessoa.fazerAniversario = function() {
+pessoa.fazerAniversario = function () {
     pessoa.idade++;
 }
 
@@ -37,7 +37,7 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-pessoa.andar = function(metros) {
+pessoa.andar = function (metros) {
     pessoa.caminhouQuantosMetros += metros;
     pessoa.andando = true;
 }
@@ -45,7 +45,7 @@ pessoa.andar = function(metros) {
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-pessoa.parar = function() {
+pessoa.parar = function () {
     pessoa.andando = false;
 }
 
@@ -53,15 +53,15 @@ pessoa.parar = function() {
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-pessoa.nomeCompleto = function() {
-    return "Olá! Meu nome é " + pessoa.nome + " " + pessoa.sobrenome;
+pessoa.nomeCompleto = function () {
+    return "Olá! Meu nome é " + pessoa.nome + " " + pessoa.sobrenome + "!";
 }
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-pessoa.mostrarIdade = function() {
+pessoa.mostrarIdade = function () {
     return 'Olá, eu tenho ' + pessoa.idade + ' anos!';
 }
 
@@ -69,7 +69,7 @@ pessoa.mostrarIdade = function() {
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
-pessoa.mostrarPeso = function() {
+pessoa.mostrarPeso = function () {
     return "Eu peso " + pessoa.peso + "Kg.";
 }
 
@@ -77,7 +77,7 @@ pessoa.mostrarPeso = function() {
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-pessoa.mostrarAltura = function() {
+pessoa.mostrarAltura = function () {
     return "Minha altura é " + pessoa.altura + "m.";
 }
 /*
@@ -91,20 +91,17 @@ pessoa.nomeCompleto(); //"Olá! Meu nome é Fernando Zambrano"
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.idade; //33
 pessoa.mostrarIdade(); // "Olá, eu tenho 33 anos!"
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.peso; //74
 pessoa.mostrarPeso(); //"Eu peso 74Kg."
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.altura; //1.73
 pessoa.mostrarAltura(); //"Minha altura é 1.73m."
 
 /*
@@ -118,7 +115,6 @@ Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-pessoa.idade; //36
 pessoa.mostrarIdade(); //"Olá, eu tenho 36 anos!"
 
 /*
@@ -168,13 +164,13 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-pessoa.apresentacao = function() {
+pessoa.apresentacao = function () {
 
     var artigo = " o ";
     var tempo = " anos, ";
     var distancia = " metros!";
 
-    if(pessoa.sexo === 'feminino') {
+    if(pessoa.sexo === 'Feminino') {
         artigo = " a ";
     }
 
@@ -190,5 +186,5 @@ pessoa.apresentacao = function() {
 }
 
 // Agora, apresente-se ;)
-/*Olá, eu sou o Fernando Zambrano, tenho 36 anos, a minha altura é 1.73, meu peso é 74 e, só hoje, eu já caminhei 600 metros!*/
+pessoa.apresentacao(); // Olá, eu sou o Fernando Zambrano, tenho 36 anos, a minha altura é 1.73, meu peso é 74 e, só hoje, eu já caminhei 600 metros!
 ```

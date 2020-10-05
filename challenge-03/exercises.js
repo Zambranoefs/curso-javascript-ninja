@@ -1,6 +1,6 @@
 var myobject = {};
 
-var pessoa = { nome: 'Fernando', sobrenome: 'Zambrano', sexo: 'masculino', idade: 33, altura: 1.73, peso: 74, andando: false, caminhouQuantosMetros: 0};
+var pessoa = { nome: 'Fernando', sobrenome: 'Zambrano', sexo: 'Masculino', idade: 33, altura: 1.73, peso: 74, andando: false, caminhouQuantosMetros: 0};
 
 pessoa.fazerAniversario = function() {
     pessoa.idade++;
@@ -36,7 +36,7 @@ pessoa.apresentacao = function() {
     var tempo = " anos, ";
     var distancia = " metros!";
 
-    if(pessoa.sexo === 'feminino') {
+    if(pessoa.sexo === 'Feminino') {
         artigo = " a ";
     }
 
