@@ -2,35 +2,35 @@ var myobject = {};
 
 var pessoa = { nome: 'Fernando', sobrenome: 'Zambrano', sexo: 'Masculino', idade: 33, altura: 1.73, peso: 74, andando: false, caminhouQuantosMetros: 0};
 
-pessoa.fazerAniversario = function() {
+pessoa.fazerAniversario = function () {
     pessoa.idade++;
 }
 
-pessoa.andar = function(metros) {
+pessoa.andar = function (metros) {
     pessoa.caminhouQuantosMetros += metros;
     pessoa.andando = true;
 }
-pessoa.parar = function() {
+pessoa.parar = function () {
     pessoa.andando = false;
 }
 
-pessoa.nomeCompleto = function() {
+pessoa.nomeCompleto = function () {
     return "Olá! Meu nome é " + pessoa.nome + " " + pessoa.sobrenome;
 }
 
-pessoa.mostrarIdade = function() {
+pessoa.mostrarIdade = function () {
     return 'Olá, eu tenho ' + pessoa.idade + ' anos!';
 }
 
-pessoa.mostrarPeso = function() {
+pessoa.mostrarPeso = function () {
     return "Eu peso " + pessoa.peso + "Kg.";
 }
 
-pessoa.mostrarAltura = function() {
+pessoa.mostrarAltura = function () {
     return "Minha altura é " + pessoa.altura + "m.";
 }
 
-pessoa.apresentacao = function() {
+pessoa.apresentacao = function () {
 
     var artigo = " o ";
     var tempo = " anos, ";
