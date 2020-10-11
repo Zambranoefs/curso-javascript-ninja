@@ -59,19 +59,19 @@ os livros.
 */
 function book(nomeLivro) {
     var livros = {
-        'Harry Potter': {
+        'harry potter': {
             quantidadePaginas: 200,
             autor: 'J. K. Rowling',
             editora: 'Salamandra'
         },
 
-        'Dragon Ball': {
+        'dragon ball': {
             quantidadePaginas: 1000,
             autor: 'Akira Toriyama',
             editora: 'Televen'
         },
 
-        'In Plain Sight': {
+        'in plain sight': {
             quantidadePaginas: 70,
             autor: 'Greg Gardner',
             editora: 'USA Network'
@@ -82,11 +82,11 @@ function book(nomeLivro) {
         return livros;
     }
     
-    if (livros[nomeLivro] === undefined) {
+    if (livros[nomeLivro.toLowerCase()] === undefined) {
         return 'Esse livro não existe!';
     }
 
-    return livros[nomeLivro];
+    return livros[nomeLivro.toLowerCase()];
 }
 
 /*
@@ -100,18 +100,18 @@ usando a frase:
 'O livro [NOME_DO_LIVRO] tem [X] páginas!'*/
 
 nomeLivro = 'Harry Potter'
-console.log('O livro ' + nomeLivro + ' tem ' + book(nomeLivro).quantidadePaginas + ' páginas!');
+console.log('O livro ' + nomeLivro + ' tem ' + book(nomeLivro.toLowerCase()).quantidadePaginas + ' páginas!');
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 'O autor do livro [NOME_DO_LIVRO] é [AUTOR].'
 */
-console.log('O autor do livro ' + nomeLivro + ' é ' + book(nomeLivro).autor + '.');
+console.log('O autor do livro ' + nomeLivro + ' é ' + book(nomeLivro.toLowerCase()).autor + '.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 'O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA].'
 */
-console.log('O livro ' + nomeLivro + ' foi publicado pela editora ' + book(nomeLivro).editora + '.');
+console.log('O livro ' + nomeLivro + ' foi publicado pela editora ' + book(nomeLivro.toLowerCase()).editora + '.');
