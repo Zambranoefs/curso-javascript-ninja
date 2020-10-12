@@ -94,8 +94,7 @@ var counter = 20;
 
 while (counter <= 30) {
 
-    console.log(counter);
-    counter++;
+    console.log(counter++); // Displays the value and then increments it
 }
 
 /*
