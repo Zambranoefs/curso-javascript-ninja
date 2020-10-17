@@ -29,7 +29,7 @@ correto da variável ou função chamada.
         var number2 = 20;
         var sum = function sum() {
             return number1 + number2;
-        };
+        }
 
         console.log( 'A soma de 10 e 20 é igual a', sum ? sum() : undefined );
       
@@ -72,7 +72,7 @@ que foram passados para a primeira função `calculator`.
 
         return function (callback) {
             return callback(num1, num2);
-        }
+        };
     }
 
 /*
