@@ -115,7 +115,7 @@
     text = '<h1>Título da página</h1><p>Este é um parágrafo</p><footer>Rodapé</footer>';
     
     console.log(text.replace(
-        /<(\w+)>([^<]+)<\/\w+>/g, 
+        /<(\w+)>([^<]+)<\/\w+>/g,  
         '<$1>O texto dentro da tag "$1" é "$2"</$1>\n'
         )
     );
